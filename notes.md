@@ -1,8 +1,8 @@
-Prompt
+# Prompt
   - Find EMS vehicles (given adverse conditions)?
     - US fire, police, ems vehicles
 
-Ideas + Brainstorm
+# Ideas + Brainstorm
   - OpenCV using haar classifier
     - Pull positives and negatives from online -> crop square -> scale to 250px?
     - Train on Colab? AWS + GPU?
