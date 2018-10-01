@@ -28,6 +28,9 @@ for i, row in labels.iterrows():
     vals = list(map(lambda x: str(int(x-1)), (row.dropna()).tolist()))
     num = int(len(vals)/4)
 
+    if num == 0:
+        continue
+
     # convert matlab to opencv info format
     fixed_vals = []
     for i in range(1, num+1):
