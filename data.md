@@ -20,3 +20,6 @@ Notes on classifiers
 	- ImageNet ambulances trained against ImageNet streets
 
 ### Police
+  - police_cascade
+    - 32 stages
+	- trained from ~500 positive police cars from ImageNet against street images
