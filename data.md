@@ -23,3 +23,6 @@ Notes on classifiers
   - police_cascade
     - 32 stages
 	- trained from ~500 positive police cars from ImageNet against street images
+  - police_cascade_2
+    - 30 stages
+	- trained from 800 positive images from ImageNet and Google Images against street images

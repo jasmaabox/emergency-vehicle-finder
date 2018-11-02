@@ -1,4 +1,4 @@
-import os
+import os, sys
 import cv2
 
 SHOW_VIDEO = True
@@ -6,7 +6,7 @@ SHOW_VIDEO = True
 # load classifiers
 firetruck_haar = cv2.CascadeClassifier('data/firetruck_cascade_5.xml')
 ems_haar = cv2.CascadeClassifier('data/ambulance_cascade.xml')
-police_haar = cv2.CascadeClassifier('data/police_cascade.xml')
+police_haar = cv2.CascadeClassifier('data/police_cascade_2.xml')
 
 def find_center(x):
     """Finds center of roi"""
@@ -21,7 +21,7 @@ def process_img(img):
 
     firetrucks = firetruck_haar.detectMultiScale(gray, scaleFactor=1.2, minNeighbors=20)
     ems = ems_haar.detectMultiScale(gray, scaleFactor=1.2, minNeighbors=40)
-    police = police_haar.detectMultiScale(gray, scaleFactor=1.2, minNeighbors=20)
+    police = police_haar.detectMultiScale(gray, scaleFactor=1.2, minNeighbors=15)
 
     # show vid
     if SHOW_VIDEO:
@@ -32,7 +32,7 @@ def process_img(img):
         for (x, y, w, h) in police:
             cv2.rectangle(img, (x, y), (x+w, y+h), (255, 255, 0), 2)
         cv2.imshow('frame', img)
-        cv2.waitKey(1)
+        cv2.waitKey(0)
 
     emergency_vehicles = []
     emergency_vehicles += list(map(find_center, firetrucks))
@@ -44,7 +44,7 @@ def process_img(img):
 
 def main():
     # load files
-    with open('in2.txt', 'r') as f:
+    with open(sys.argv[1], 'r') as f:
         fpaths = f.read().split('\n')
 
     # process data
