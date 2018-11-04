@@ -4,3 +4,4 @@ test_imgs/street/3.bmp
 test_imgs/street/4.bmp
 test_imgs/street/5.bmp
 test_imgs/street/6.bmp
+test_vids/test.mp4
