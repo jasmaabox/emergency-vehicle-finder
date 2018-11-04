@@ -18,6 +18,9 @@ Notes on classifiers
   - ambulance_cascade
     - 25 stages
 	- ImageNet ambulances trained against ImageNet streets
+  - ambulance_cascade
+    - 31 stages
+	- 800 ImageNet and Google Image ambulances trained against ImageNet streets
 
 ### Police
   - police_cascade
