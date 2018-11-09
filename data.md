@@ -32,3 +32,6 @@ Notes on classifiers
   - police_cascade_3
     - 30 stages
 	- trained from 800 positive images from ImageNet and Google Images against street, random, and car images
+  - police_cascade_3
+    - 30 stages
+	- trained from 1800 positive images from ImageNet and Google Images against street, random, and car images
