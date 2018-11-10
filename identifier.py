@@ -5,7 +5,7 @@ SHOW_VIDEO = False
 
 # load classifiers
 firetruck_haar = cv2.CascadeClassifier('data/firetruck_cascade_5.xml')
-ems_haar = cv2.CascadeClassifier('data/ambulance_cascade_2.xml')
+ems_haar = cv2.CascadeClassifier('data/ambulance_cascade_3.xml')
 police_haar = cv2.CascadeClassifier('data/police_cascade_4.xml')
 
 def find_center(x):
@@ -18,7 +18,7 @@ def process_img(img):
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
     firetrucks = firetruck_haar.detectMultiScale(gray, scaleFactor=1.2, minNeighbors=20)
-    ems = ems_haar.detectMultiScale(gray, scaleFactor=1.2, minNeighbors=20)
+    ems = ems_haar.detectMultiScale(gray, scaleFactor=1.2, minNeighbors=15)
     police = police_haar.detectMultiScale(gray, scaleFactor=1.2, minNeighbors=15)
 
     # show vid
