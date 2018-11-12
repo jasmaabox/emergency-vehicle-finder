@@ -1,7 +1,7 @@
-# NG Image Recognition
+# Emergency Vehicle Finder
 
-Repo for image recognition challenge.
-Makes its best attempt to detect emergency vehicles using Haar-feature classifiers.
+Made for the NG Image Recognition challenge.
+Makes its best attempt to detect emergency vehicles using Haar feature classifiers.
 
 ## Run
   - `pip install -r "requirements.txt"`
