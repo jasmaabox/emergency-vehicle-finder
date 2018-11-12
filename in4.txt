@@ -1,2 +1,0 @@
-test_vids/FireDepartment.mp4
-test_vids/police_partial.mp4

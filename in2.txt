@@ -1,1 +1,0 @@
-test_vids/full_test.mp4
