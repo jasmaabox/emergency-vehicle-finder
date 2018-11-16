@@ -1,6 +1,6 @@
 # Emergency Vehicle Finder
 
-Made for the NG Image Recognition challenge.
+Naive classifier made for the NG Image Recognition challenge.
 Makes its best attempt to detect emergency vehicles using Haar feature classifiers.
 
 ## Run
